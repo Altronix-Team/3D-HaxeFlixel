@@ -39,6 +39,8 @@ class FlxView3D extends FlxSprite
 	{
 		super(x, y);
 
+		if (!Flx3DUtil.is3DAvailable()) this.destroy();
+
 		view = new View3D();
 		view.visible = false;
 
